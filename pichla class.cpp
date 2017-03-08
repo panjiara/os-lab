@@ -1,83 +1,81 @@
 #include<bits/stdc++.h>
 using namespace  std;
-struct process {
+struct prakriya {
 
-int psize;
-int ct;
+int process_size;
+int context_time;
 
-bool done;
-int bid;
+bool ho_gaya;
+int block_id;
 } p[20];
 struct memory
 {
-   int bsize;
+   int block_size;
    int osize;
-   int pid;
-   bool emp;
+   int process_id;
+   bool khali_hai;
 
 }m[10];
 
-queue <int > q;
+queue <int > katar;
 int main()
 {
-    int np,nb;
+    int P,B;
     int frag=0;
-    printf("enter the number of processes\n");
-    scanf("%d",&np);
-    printf("enter the burst and size of each block\n");
-    for(int i=0;i<np;i++)
+    printf("number of process \n");
+    scanf("%d",&P);
+    printf("Enter the cpu cycle time and  block size\n");
+    for(int i=0;i<P;i++)
     {
 
-        cin >> p[i].ct >> p[i].psize;
-        p[i].done=false;
+        cin >> p[i].context_time >> p[i].process_size;
+        p[i].ho_gaya=false;
 
 
     }
 
-    printf("enter the number of blocks\n");
-    scanf("%d",&nb);
-    printf("enter the block sizes\n");
+    printf("number of Blocks Please!!\n");
+    scanf("%d",&B);
+    printf("Block Sizes Pleas!! \n");
 
-    for(int i=0;i<nb;i++)
+    for(int i=0;i<B;i++)
     {
-        cin >> m[i].bsize;
-        m[i].emp=false;
-        m[i].osize=m[i].bsize;
+        cin >> m[i].block_size;
+        m[i].khali_hai=false;
+        m[i].osize=m[i].block_size;
     }
     int sofar=0;
     int t=0;
     int run=0;
 
-    while (run <np)
+    while (run <P)
     {
          printf(" At t= %d\n ",t);
         printf("available memory \n");
-        for(int k=0;k<nb;k++)
+        for(int k=0;k<B;k++)
         {
-            printf("  m[%d] = %d\n",k+1,m[k].bsize);
+            printf("  m[%d] = %d\n",k+1,m[k].block_size);
 
         }
-
-
-        for(int i=0;i<np;i++)
+         for(int i=0;i<P;i++)
         {
-            if( p[i].done == false)
+            if( p[i].ho_gaya == false)
 {
-               for(int k=0;k<nb;k++)
+               for(int k=0;k<B;k++)
                {
-                 if (  m[k].emp == false && m[k].bsize >= p[i].psize)
+                 if (  m[k].khali_hai == false && m[k].block_size >= p[i].process_size)
                    {
 
-                       m[k].bsize-=p[i].psize;
-                       frag+=m[k].bsize;
+                       m[k].block_size-=p[i].process_size;
+                       frag+=m[k].block_size;
 
-                       m[k].pid=i+1;
-                       p[i].bid=k+1;
+                       m[k].process_id=i+1;
+                       p[i].block_id=k+1;
                        printf(" job[%d] will be loaded in M[%d] \n",i+1,k+1);
 
-                       q.push(i);
-                       p[i].done=true;
-                        m[k].emp=true;
+                       katar.push(i);
+                       p[i].ho_gaya=true;
+                        m[k].khali_hai=true;
                         sofar ++;
                         break;
                    }
@@ -87,33 +85,32 @@ int main()
                     }
         }
         printf("\n");
-        // printf(" \n No of jobs loaded so far  %d\n",sofar);
-        printf(" Jobs In Main Memory are \n");
-        for(int k=0;k<nb;k++)
+        printf(" Main memory jobs are::::::::\n");
+        for(int k=0;k<B;k++)
          {
-             printf(" J[%d]",m[k].pid);
+             printf(" J[%d]=>",m[k].process_id);
 
          }
 
-         int w;
+         int temp;
 
 
 
 
-         w=q.front();
-         q.pop();
+         temp=katar.front();
+         katar.pop();
 
-         int mf=p[w].bid;
+         int mf=p[temp].block_id;
          mf--;
-         m[mf].bsize=m[mf].osize;
+         m[mf].block_size=m[mf].osize;
 
-         m[mf].emp=false;
+         m[mf].khali_hai=false;
 
 
-         t+=p[w].ct;
-         printf(" \n Job[%d] will run for %d seconds \n ",w+1,t);
+         t+=p[temp].context_time;
+         printf(" \n Job[%d] will run for %d seconds \n ",temp+1,t);
 run++;
- printf(" so block released m [%d] = %d\n",mf+1,m[mf].bsize);
+ printf(" so block released m [%d] = %d\n",mf+1,m[mf].block_size);
 
 printf("total fragmentation  now= %d\n",frag);
 
