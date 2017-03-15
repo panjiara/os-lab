@@ -1,0 +1,5 @@
+3              //  total no of process
+0 24 0         // 0 -> process name 24 -> cpu burst  0 -> arrival time 
+1 3 0
+2 3 0
+4 0     // 4  -> qunatam time   0 -> context switch time

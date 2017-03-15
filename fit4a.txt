@@ -1,0 +1,384 @@
+J18-->1	1380
+J4-->2	2030
+J5-->2	2550
+J22-->2	2710
+J17-->3	3210
+J20-->3	3610
+J2-->4	4190
+J1-->5	5760
+J11-->5	6580
+J24-->5	5950
+J6-->6	6990
+J10-->6	6890
+J9-->7	3930
+J16-->7	7540
+J21-->7	7540
+J3-->8	3290
+J7-->8	8940
+J12-->8	3820
+J23-->8	8390
+J13-->9	9140
+J19-->9	9850
+J8-->10	740
+J14-->10	420
+J15-->10	220
+J25-->10	760
+
+
+J 18 -> M1
+J 4 -> M2
+J 5 -> M3
+J 22 -> M4
+J 17 -> M6
+J 20 -> M8
+J 8 -> M5
+J 14 -> M7
+J 15 -> M9
+Block no	Remaining
+M1		8120
+M2		4970
+M3		1950
+M4		5790
+M5		2260
+M6		5790
+M7		580
+M8		1890
+M9		1280
+M10		500
+t=0
+Waiting Queue Length= 16
+Internal Fragmentation= 33130
+
+J 2 -> M1
+Block no	Remaining
+M1		5310
+M2		4970
+M3		1950
+M4		5790
+M5		2260
+M6		5790
+M7		580
+M8		1890
+M9		1280
+M10		500
+t=1
+Waiting Queue Length= 15
+Internal Fragmentation= 30320
+
+J 1 -> M2
+J 11 -> M4
+J 9 -> M3
+Block no	Remaining
+M1		5310
+M2		1240
+M3		570
+M4		1920
+M5		2260
+M6		5790
+M7		580
+M8		1890
+M9		1280
+M10		500
+t=2
+Waiting Queue Length= 12
+Internal Fragmentation= 21340
+
+J 24 -> M6
+J 3 -> M8
+Block no	Remaining
+M1		5310
+M2		1240
+M3		570
+M4		1920
+M5		2260
+M6		3050
+M7		580
+M8		2210
+M9		1280
+M10		500
+t=3
+Waiting Queue Length= 10
+Internal Fragmentation= 18920
+
+Block no	Remaining
+M1		5310
+M2		1240
+M3		570
+M4		1920
+M5		2260
+M6		3050
+M7		580
+M8		2210
+M9		1280
+M10		500
+t=4
+Waiting Queue Length= 10
+Internal Fragmentation= 18920
+
+J 6 -> M1
+Block no	Remaining
+M1		2510
+M2		1240
+M3		570
+M4		1920
+M5		2260
+M6		3050
+M7		580
+M8		2210
+M9		1280
+M10		500
+t=5
+Waiting Queue Length= 9
+Internal Fragmentation= 16120
+
+Block no	Remaining
+M1		2510
+M2		1240
+M3		570
+M4		1920
+M5		2260
+M6		3050
+M7		580
+M8		2210
+M9		1280
+M10		500
+t=6
+Waiting Queue Length= 9
+Internal Fragmentation= 16120
+
+J 10 -> M2
+J 16 -> M4
+Block no	Remaining
+M1		2510
+M2		110
+M3		570
+M4		960
+M5		2260
+M6		3050
+M7		580
+M8		2210
+M9		1280
+M10		500
+t=7
+Waiting Queue Length= 7
+Internal Fragmentation= 14030
+
+J 21 -> M6
+Block no	Remaining
+M1		2510
+M2		110
+M3		570
+M4		960
+M5		2260
+M6		1460
+M7		580
+M8		2210
+M9		1280
+M10		500
+t=8
+Waiting Queue Length= 6
+Internal Fragmentation= 12440
+
+J 12 -> M3
+Block no	Remaining
+M1		2510
+M2		110
+M3		680
+M4		960
+M5		2260
+M6		1460
+M7		580
+M8		2210
+M9		1280
+M10		500
+t=9
+Waiting Queue Length= 5
+Internal Fragmentation= 12550
+
+J 25 -> M5
+Block no	Remaining
+M1		2510
+M2		110
+M3		680
+M4		960
+M5		2240
+M6		1460
+M7		1000
+M8		2210
+M9		1500
+M10		500
+t=10
+Waiting Queue Length= 4
+Internal Fragmentation= 13170
+
+J 7 -> M1
+Block no	Remaining
+M1		560
+M2		110
+M3		680
+M4		960
+M5		2240
+M6		1460
+M7		1000
+M8		5500
+M9		1500
+M10		500
+t=11
+Waiting Queue Length= 3
+Internal Fragmentation= 14510
+
+Block no	Remaining
+M1		560
+M2		110
+M3		680
+M4		960
+M5		2240
+M6		1460
+M7		1000
+M8		5500
+M9		1500
+M10		500
+t=12
+Waiting Queue Length= 3
+Internal Fragmentation= 14510
+
+Block no	Remaining
+M1		560
+M2		7000
+M3		680
+M4		960
+M5		2240
+M6		1460
+M7		1000
+M8		5500
+M9		1500
+M10		500
+t=13
+Waiting Queue Length= 3
+Internal Fragmentation= 21400
+
+J 23 -> M4
+Block no	Remaining
+M1		560
+M2		7000
+M3		680
+M4		110
+M5		2240
+M6		1460
+M7		1000
+M8		5500
+M9		1500
+M10		500
+t=14
+Waiting Queue Length= 2
+Internal Fragmentation= 20550
+
+Block no	Remaining
+M1		560
+M2		7000
+M3		680
+M4		110
+M5		2240
+M6		9000
+M7		1000
+M8		5500
+M9		1500
+M10		500
+t=15
+Waiting Queue Length= 2
+Internal Fragmentation= 28090
+
+Block no	Remaining
+M1		560
+M2		7000
+M3		680
+M4		110
+M5		2240
+M6		9000
+M7		1000
+M8		5500
+M9		1500
+M10		500
+t=16
+Waiting Queue Length= 2
+Internal Fragmentation= 28090
+
+Block no	Remaining
+M1		560
+M2		7000
+M3		4500
+M4		110
+M5		2240
+M6		9000
+M7		1000
+M8		5500
+M9		1500
+M10		500
+t=17
+Waiting Queue Length= 2
+Internal Fragmentation= 31910
+
+Block no	Remaining
+M1		560
+M2		7000
+M3		4500
+M4		110
+M5		2240
+M6		9000
+M7		1000
+M8		5500
+M9		1500
+M10		500
+t=18
+Waiting Queue Length= 2
+Internal Fragmentation= 31910
+
+J 13 -> M1
+Block no	Remaining
+M1		360
+M2		7000
+M3		4500
+M4		110
+M5		2240
+M6		9000
+M7		1000
+M8		5500
+M9		1500
+M10		500
+t=19
+Waiting Queue Length= 1
+Internal Fragmentation= 31710
+
+
+
+Waiting Time
+J18: 0
+J4: 0
+J5: 0
+J22: 0
+J17: 0
+J20: 0
+J2: 1
+J1: 2
+J11: 2
+J24: 3
+J6: 5
+J10: 7
+J9: 2
+J16: 7
+J21: 8
+J3: 3
+J7: 11
+J12: 9
+J23: 14
+J13: 19
+J19: Not done
+J8: 0
+J14: 0
+J15: 0
+J25: 10
+
+
+Total jobs executed: 24
+Finish time: 28
+Throughput: 0.857143
