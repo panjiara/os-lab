@@ -22,10 +22,8 @@ struct job
 int main()
 {
     freopen("fit.txt","r",stdin);
-   // freopen("fit3a.txt","w",stdout);
-
 	int j,m;
-
+				
 	//cout<<"Enter no. of memory blocks: ";
 	cin>>m;
 	//cout<<"Enter sizes of all the memory blocks: ";
@@ -35,7 +33,7 @@ int main()
 		M[i].rem=M[i].memory;
 		M[i].occupied=false;
 	}
-
+				
 	//cout<<"Enter no. of jobs: ";
 	cin>>j;
 	//cout<<"Enter burst time and sizes needed by all the jobs: ";
@@ -44,9 +42,9 @@ int main()
 		cin>>J[i].cpu>>J[i].jsize;
 		J[i].end=-1;
 	}
-
+				
     int executed=0, t=0;
-
+    
     int n=0;
     bool flag=false;
     for(int i=0; i<j; ++i)
@@ -62,7 +60,7 @@ int main()
     	 if(flag==true) n++;
     	 flag=false;
     }
-
+    
     while(executed<n)
     {
          for(int i=0; i<j; ++i)
@@ -86,7 +84,7 @@ int main()
                      J[i].end=t+J[i].cpu;
                      M[k].rem-=J[i].jsize;
                      J[i].store=k;
-              //       cout<<"J "<<i+1<<" -> M"<<k+1<<"\n";
+                     cout<<"J "<<i+1<<" -> M"<<k+1<<"\n";
                      M[k].occupied=true;
                      break;
                    }
@@ -95,7 +93,7 @@ int main()
          }
          int ifrag=0;
          int waitqlength=j-executed;
-
+         
          cout<<"Block no\tRemaining\n";
          for(int k=0; k<m; ++k)
          {
